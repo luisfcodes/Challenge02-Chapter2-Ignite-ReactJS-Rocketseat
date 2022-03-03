@@ -5,10 +5,11 @@ import { Container} from './styles'
 
 interface InputProps {
   name: string,
-  icon: React.ElementType
+  icon?: React.ElementType,
+  placeholder: string
 }
 
-export function Input({ name, icon: Icon, ...rest }:InputProps){
+export function Input({ name, icon: Icon, placeholder }:InputProps){
   const inputRef = useRef<HTMLInputElement>(null);
 
   const [isFocused, setIsFocused] = useState<boolean>(false);
@@ -43,7 +44,7 @@ export function Input({ name, icon: Icon, ...rest }:InputProps){
         onBlur={handleInputBlur}
         defaultValue={defaultValue}
         ref={inputRef}
-        {...rest}
+        placeholder={placeholder}
       />
 
     </Container>
