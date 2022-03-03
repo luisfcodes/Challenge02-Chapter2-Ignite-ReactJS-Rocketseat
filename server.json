@@ -2,10 +2,10 @@
   "foods": [
     {
       "id": 1,
-      "name": "Ao molho ",
+      "name": "Ao molho",
       "description": "Macarrão ao molho branco, fughi e cheiro verde das montanhas",
-      "price": "23.90",
-      "available": true,
+      "price": "25.90",
+      "available": false,
       "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food1.png"
     },
     {
@@ -18,8 +18,8 @@
     },
     {
       "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food3.png",
-      "name": "Moda Italiana",
-      "price": "25.90",
+      "name": "Massa Italiana Nobre",
+      "price": "31.90",
       "description": "Deliciosa massa italiana, acompanhada de legumes retirados da horta local",
       "available": true,
       "id": 3

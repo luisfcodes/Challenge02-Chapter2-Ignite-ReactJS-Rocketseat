@@ -19,10 +19,6 @@ interface EditingFoodProps {
   id?: number
 }
 
-// editingFood?: {
-//   id: number
-// },
-
 export function Dashboard(){
 
   const [foodsState, setFoodsState] = useState<FoodsStateProps[]>([])
@@ -40,7 +36,7 @@ export function Dashboard(){
     fetchAPI()
   },[])
 
-  async function handleAddFood(food:any) {
+  async function handleAddFood(food:{}) {
     
     try {
       const response = await api.post('/foods', {
@@ -54,7 +50,7 @@ export function Dashboard(){
     }
   }
 
-  async function handleUpdateFood(food:any){
+  async function handleUpdateFood(food:{id?: number}){
     try {
       const foodUpdated = await api.put(
         `/foods/${food.id}`,

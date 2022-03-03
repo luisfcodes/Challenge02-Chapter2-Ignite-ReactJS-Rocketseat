@@ -8,13 +8,13 @@ import { Input } from '../Input'
 interface ModalAddProps{
   isOpen: boolean,
   setIsOpen: () => void,
-  handleAddFood: (props:any) => void
+  handleAddFood: ({}) => void
 }
 
 export function ModalAddFood(props:ModalAddProps){
   const formRef = createRef<any>()
 
-  const handleSubmit = async (data:any) => {
+  const handleSubmit = async (data:{}) => {
     const { setIsOpen, handleAddFood } = props;
 
     handleAddFood(data);

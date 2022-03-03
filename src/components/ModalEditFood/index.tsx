@@ -8,7 +8,7 @@ import { Input } from '../Input';
 interface ModalEditProps {
   isOpen: boolean,
   setIsOpen: () => void,
-  handleUpdateFood: (props: any) => void,
+  handleUpdateFood: ({}) => void,
   editingFood: {
     id?: number
   }
@@ -17,11 +17,10 @@ interface ModalEditProps {
 export function ModalEditFood(props: ModalEditProps) {
   const formRef = createRef<any>()
 
-  const handleSubmit = async (data: any) => {
-    const test = {...data, id: editingFood.id}
+  const handleSubmit = async (data: {}) => {
     const { setIsOpen, handleUpdateFood } = props;
 
-    handleUpdateFood(test);
+    handleUpdateFood({...data, id: editingFood.id});
     setIsOpen();
   };
 
